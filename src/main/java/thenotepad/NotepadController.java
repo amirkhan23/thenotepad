@@ -28,10 +28,6 @@ public class NotepadController implements Initializable {
 	@FXML
 	BorderPane bp;
 
-	/*
-	 * @FXML Label label;
-	 */
-
 	private FileChooser fileChooser = new FileChooser();
 	private File file;
 
@@ -48,7 +44,7 @@ public class NotepadController implements Initializable {
 		if (file != null) {
 			Stage stage = (Stage) textArea.getScene().getWindow();
 			stage.setTitle(file.getName() + " - Notepad");
-			// label.setText(file.getName() + " - Notepad");
+
 			BufferedReader br = null;
 			try {
 				String sCurrentLine;
@@ -85,7 +81,7 @@ public class NotepadController implements Initializable {
 			if (file != null) {
 				Stage stage = (Stage) textArea.getScene().getWindow();
 				stage.setTitle(file.getName() + " - Notepad");
-				// label.setText(file.getName() + " - Notepad");
+
 				try {
 					// if file doesnt exists, then create it
 					if (!file.exists()) {
@@ -110,7 +106,6 @@ public class NotepadController implements Initializable {
 		if (file != null) {
 			Stage stage = (Stage) textArea.getScene().getWindow();
 			stage.setTitle(file.getName() + " - Notepad");
-			// label.setText(file.getName() + " - Notepad");
 			try {
 				// if file does not exists, then create it
 				if (!file.exists()) {
